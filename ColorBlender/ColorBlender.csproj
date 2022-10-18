@@ -5,13 +5,15 @@
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <Description>Blends colors with various blend modes in C#</Description>
     <PackageProjectUrl>https://github.com/E4rth/ColorBlender</PackageProjectUrl>
-    <PackageReadmeFile>Readme.md</PackageReadmeFile>
+    <PackageReadmeFile>ReadmeNuget.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/E4rth/ColorBlender</RepositoryUrl>
     <Title>Color Blender</Title>
     <Authors>E4rth</Authors>
     <Copyright>https://github.com/E4rth/ColorBlender</Copyright>
     <PackageTags>Color, Converter, Blend, Blending, Blender, RGB, HSL, HEX</PackageTags>
     <PackageIcon>Icon.png</PackageIcon>
+    <PackageId>Earth.ColorBlender</PackageId>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,10 +22,6 @@
       <PackagePath>\</PackagePath>
     </None>
     <None Include="..\LICENSE.txt">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <None Include="..\Readme.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>

@@ -1,9 +1,5 @@
 # Color Blender
 
-![Version on NuGet](https://img.shields.io/nuget/v/Earth.ColorBlender)</br>
-
->Blends colors with various blend modes in C#
-
 This is a Color Blending library that implements all the blending modes introduced in the [W3C Compositing and Blending spec](https://www.w3.org/TR/compositing-1/).
 
 ## Table of Content
@@ -44,32 +40,35 @@ This library provides an implementation for all blend modes listed in the W3C do
 
  #### Unit Rgb
 
- It is a higher precision form of `RGB` color that uses `decimal` values.</br>
- All the inner blending calculations are performed in this form of a color.</br>
+ It is a higher precision form of `RGB` color that uses `decimal` values.
+
+ All the inner blending calculations are performed in this form of a color.
+
  The `Red`, `Green`, `Blue` and `Alpha` channels are represented by a fractional value between 0 and 1.
 
  #### RGB
 
- The `Red`, `Green` and `Blue` channels are represented by a fractional value between 0 and 255.<br/>
+ The `Red`, `Green` and `Blue` channels are represented by a fractional value between 0 and 255.
+
  The `Alpha` channel is represented by a fractional value between 0 and 1.
 
  #### HSL
 
- The `Hue` channel is represented by a fractional value between 0 and 360.<br/>
- The `Saturation` and `Luminosity` channels are represented by a fractional value between 0 and 100.<br/>
+ The `Hue` channel is represented by a fractional value between 0 and 360.
+
+ The `Saturation` and `Luminosity` channels are represented by a fractional value between 0 and 100.
+
  The `Alpha` channel is represented by a fractional value between 0 and 1.
 
  #### HEX
 
  The `Red`, `Green`, `Blue` and `Alpha` channels are represented by a hexadecimal form of a `String` between "00" and "ff".
 
- Class constructor supports any form of a Hex color, such as it's short form `#rgb`, and full forms with <b>leading</b> or <b>trailing</b> Alpha channel (`#aarrggbb` and `#rrggbbaa`) with an optional `#` sign.
+ Class constructor supports any form of a Hex color, such as it's short form `#rgb`, and full forms with leading or trailing Alpha channel (`#aarrggbb` and `#rrggbbaa`) with an optional `#` sign.
 
  The Hex Object also can be represented as a `String` with all the forms described above.
 
- <details>
-  <summary>Example</summary>
-
+ **Example**
    ```c#
    using ColorBlender;
 
@@ -88,13 +87,11 @@ This library provides an implementation for all blend modes listed in the W3C do
        var resultConstAHex = hex.ToString(EHEXOutputFormat.ConstAHEX, EHashSignFormat.Hidden);  // Result: "ffbbccdd"
    }
    ```
-   </details>
 
 ### Converter
  Built-in converter for all the color types described above, with an optional output rounding.
 
- <details>
- <summary>Usage</summary>
+ **Usage**
 
  ```c#
  using ColorBlender;
@@ -117,15 +114,10 @@ This library provides an implementation for all blend modes listed in the W3C do
  ```
 
   `*` This is not a proper way to create a system color. It is used here in this form only to display the result.
- </details>
 
 ## Blending
-Create an instance of the `ColorBlenderService` and use it blend your colors.<br/>
+Create an instance of the `ColorBlenderService` and use it blend your colors.
 The result of the blending will be returned as an Object of a `Uniform Color` type, that can be further represented as any color type you want. See the example bellow.
-
- <div align="center">
- <img src="https://raw.githubusercontent.com/E4rth/ColorBlender/master/Art/Example.jpg" alt="Example"/>
- </div>
 
 ### Usage
 ```c#
@@ -151,7 +143,7 @@ static void Main(string[] args)
  ### Notes
  * Powered by .NET Standart 2.0
 
- * <b>Adobe Photoshop</b> uses slightly different algoritm and rounding to perform color blending, which means that you won't get an identical result.
+ * Adobe Photoshop uses slightly different algoritm and rounding to perform color blending, which means that you won't get an identical result.
 
  * Might be bugs. Please submit an issue if you find one.
 
@@ -163,13 +155,9 @@ Many thanks to:
 
  ## Creative Society
 
- <div align="center">
- <img src="https://creativesociety.com/themes/tv/assets/images/cs-logos/allatra-ornament.jpg" alt="creative society logo" width="200"/>
+ We support [Creative Society](https://creativesociety.com/)
 
- <b>We support [Creative Society](https://creativesociety.com/)</b>
- </div>
-
- <b>Creative Society</b> is a worldwide project of all humanity and it concerns everyone. 
+ Creative Society is a worldwide project of all humanity and it concerns everyone. 
 
  ### Project objectives
  * To create conditions for building a creative society on the whole planet by peaceful means.
