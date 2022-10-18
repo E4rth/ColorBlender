@@ -15,6 +15,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Art", "Art", "{736DE232-202E-4710-9837-081336E3F118}"
 	ProjectSection(SolutionItems) = preProject
 		Art\Example.jpg = Art\Example.jpg
+		Art\Icon.png = Art\Icon.png
 	EndProjectSection
 EndProject
 Global

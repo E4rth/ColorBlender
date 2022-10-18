@@ -141,14 +141,17 @@ static void Main(string[] args)
  `*` This is not a proper way to create a system color. It is used here in this form only to display the result.
 
  ### Notes
- <b>Adobe Photoshop</b> uses slightly different algoritm and rounding to perform color blending, which means that you won't get an identical result.
+ * Powered by .NET Standart 2.0
 
-  Might be bugs. Please submit an issue if you find one.
+ * <b>Adobe Photoshop</b> uses slightly different algoritm and rounding to perform color blending, which means that you won't get an identical result.
+
+ * Might be bugs. Please submit an issue if you find one.
 
 ## Thanks
 Many thanks to:
  * [Florian Reuschel](https://github.com/loilo) and his [color-blend](https://github.com/loilo/color-blend) JavaScript library for insperation.
  * [Artyom Gritsuk](https://github.com/iamartyom) and his [ColorHelper](https://github.com/iamartyom/ColorHelper) C# color converter library. I have been messing around with HSL conversion for a long time until I peeked into his code.
+ * [FlatIcon](https://www.flaticon.com/free-icon/rgb_1157899?term=color%20wheel&related_id=1157899) for package icon.
 
  ## Creative Society
 
