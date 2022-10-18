@@ -136,7 +136,7 @@ private readonly IColorBlenderService _colorBlenderService = new ColorBlenderSer
 static void Main(string[] args)
 {
     var background = new RGB(105, 151, 206, 0.8);
-    var foreground = new HEX(247, 92, 177, 0.7);
+    var foreground = new RGB(247, 92, 177, 0.7);
 
     RGB   resultRgb   = _colorBlenderService.Normal(background, foreground).ToRgb();   // Result: new RGB(211, 107, 184, 0.94);
     HEX   resultHex   = _colorBlenderService.Normal(background, foreground).ToHex();   // Result: new HEX("d3", "6b", "b8", "ef");
