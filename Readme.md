@@ -27,7 +27,7 @@ This library provides an implementation for all blend modes listed in the W3C do
 * `Color Dodge`
 * `Color Burn` 
 * `Hard Light`
-* `Soft Light`.
+* `Soft Light`
 * `Difference`
 * `Exclusion`
 * `Hue`
@@ -38,24 +38,24 @@ This library provides an implementation for all blend modes listed in the W3C do
 ### Color types
  Build-in support for commonly used color types: **Unit Rgb, Rgb, Hsl, Hex** and **Color** from *Sytem.Drawing* assembly.
 
- **Unit Rgb**
+ #### Unit Rgb
 
  It is a higher precision form of `RGB` color that uses `decimal` values.</br>
  All the inner blending calculations are performed in this form of a color.</br>
  The `Red`, `Green`, `Blue` and `Alpha` channels are represented by a fractional value between 0 and 1.
 
- **RGB**
+ #### RGB
 
  The `Red`, `Green` and `Blue` channels are represented by a fractional value between 0 and 255.<br/>
  The `Alpha` channel is represented by a fractional value between 0 and 1.
 
- **HSL**
+ #### HSL
 
  The `Hue` channel is represented by a fractional value between 0 and 360.<br/>
  The `Saturation` and `Luminosity` channels are represented by a fractional value between 0 and 100.<br/>
  The `Alpha` channel is represented by a fractional value between 0 and 1.
 
- **HEX**
+ #### HEX
 
  The `Red`, `Green`, `Blue` and `Alpha` channels are represented by a hexadecimal form of a `String` between "00" and "ff".
 
@@ -118,6 +118,10 @@ This library provides an implementation for all blend modes listed in the W3C do
 ## Blending
 Create an instance of the `ColorBlenderService` and use it blend your colors.<br/>
 The result of the blending will be returned as an Object of a `Uniform Color` type, that can be further represented as any color type you want. See the example bellow.
+
+ <div align="center">
+ <img src="https://raw.githubusercontent.com/E4rth/ColorBlender/master/Art/Example.jpg" alt="Example"/>
+ </div>
 
 ### Usage
 ```c#
