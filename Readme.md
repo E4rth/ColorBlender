@@ -1,6 +1,6 @@
 # Color Blender
 
-![Version on NuGet](https://img.shields.io/nuget/v/Earth.ColorBlender)</br>
+[![Version on NuGet](https://img.shields.io/nuget/v/Earth.ColorBlender)](https://www.nuget.org/packages/Earth.ColorBlender/)
 
 >Blends colors with various blend modes in C#
 
