@@ -1,6 +1,6 @@
 # Color Blender
 
-[![Version on NuGet](https://img.shields.io/nuget/v/Earth.ColorBlender)](https://www.nuget.org/packages/Earth.ColorBlender/)
+[![Version on NuGet](https://img.shields.io/nuget/v/E4rth.ColorBlender)](https://www.nuget.org/packages/E4rth.ColorBlender/)
 
 >Blends colors with various blend modes in C#
 
@@ -15,6 +15,7 @@ This is a Color Blending library that implements all the blending modes introduc
 - [Blending](#blending)
    + [Usage](#usage)
    + [Notes](#notes)
+- [Downloads](#downloads)
 - [Thanks](#thanks)
 - [Creative Society](#creative-society)
 
@@ -52,6 +53,10 @@ This library provides an implementation for all blend modes listed in the W3C do
 
  The `Red`, `Green` and `Blue` channels are represented by a fractional value between 0 and 255.<br/>
  The `Alpha` channel is represented by a fractional value between 0 and 1.
+
+ #### Color
+
+ Default Color Struct from **System.Drawing** assembly
 
  #### HSL
 
@@ -154,6 +159,9 @@ static void Main(string[] args)
  * <b>Adobe Photoshop</b> uses slightly different algoritm and rounding to perform color blending, which means that you won't get an identical result.
 
  * Might be bugs. Please submit an issue if you find one.
+
+## Download
+Get the library from [NuGet](https://www.nuget.org/packages/E4rth.ColorBlender/) [![Version on NuGet](https://img.shields.io/nuget/v/E4rth.ColorBlender)](https://www.nuget.org/packages/E4rth.ColorBlender/)
 
 ## Thanks
 Many thanks to:

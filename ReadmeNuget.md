@@ -41,31 +41,28 @@ This library provides an implementation for all blend modes listed in the W3C do
  #### Unit Rgb
 
  It is a higher precision form of `RGB` color that uses `decimal` values.
-
  All the inner blending calculations are performed in this form of a color.
-
  The `Red`, `Green`, `Blue` and `Alpha` channels are represented by a fractional value between 0 and 1.
 
  #### RGB
 
  The `Red`, `Green` and `Blue` channels are represented by a fractional value between 0 and 255.
-
  The `Alpha` channel is represented by a fractional value between 0 and 1.
+
+ #### Color
+
+ Default **Color** struct from **System.Drawing** assembly
 
  #### HSL
 
  The `Hue` channel is represented by a fractional value between 0 and 360.
-
  The `Saturation` and `Luminosity` channels are represented by a fractional value between 0 and 100.
-
  The `Alpha` channel is represented by a fractional value between 0 and 1.
 
  #### HEX
 
  The `Red`, `Green`, `Blue` and `Alpha` channels are represented by a hexadecimal form of a `String` between "00" and "ff".
-
  Class constructor supports any form of a Hex color, such as it's short form `#rgb`, and full forms with leading or trailing Alpha channel (`#aarrggbb` and `#rrggbbaa`) with an optional `#` sign.
-
  The Hex Object also can be represented as a `String` with all the forms described above.
 
  **Example**
@@ -128,23 +125,30 @@ private readonly IColorBlenderService _colorBlenderService = new ColorBlenderSer
 static void Main(string[] args)
 {
     var background = new RGB(105, 151, 206, 0.8);
-    var foreground = new HEX(247, 92, 177, 0.7);
+    var foreground = new RGB(247, 92, 177, 0.7);
 
-    RGB   resultRgb   = _colorBlenderService.Normal(background, foreground).ToRgb();   // Result: new RGB(211, 107, 184, 0.94);
-    HEX   resultHex   = _colorBlenderService.Normal(background, foreground).ToHex();   // Result: new HEX("d3", "6b", "b8", "ef");
-    HSL   resultHsl   = _colorBlenderService.Normal(background, foreground).ToHsl();   // Result: new HSL(315, 54, 62, 0.94);
-    Color resultColor = _colorBlenderService.Normal(background, foreground).ToColor(); // Result: new Color(211, 107, 184, 240) *;
+    RGB   resultRgb   = _colorBlenderService.Normal(background, foreground).ToRgb();   
+    // Result: new RGB(211, 107, 184, 0.94);
+
+    HEX   resultHex   = _colorBlenderService.Normal(background, foreground).ToHex();
+    // Result: new HEX("d3", "6b", "b8", "ef");
+
+    HSL   resultHsl   = _colorBlenderService.Normal(background, foreground).ToHsl();
+    // Result: new HSL(315, 54, 62, 0.94);
+
+    Color resultColor = _colorBlenderService.Normal(background, foreground).ToColor();
+    // Result: new Color(211, 107, 184, 240) *;
+
     // Rounding the output value to 5 decimal places in the return value.
-    URGB  resultURgb  = _colorBlenderService.Normal(background, foreground).ToUrgb(true, 5); // Result: new URGB(0.82645, 0.41986, 0.72315, 0.94);
+    URGB  resultURgb  = _colorBlenderService.Normal(background, foreground).ToUrgb(true, 5); 
+    // Result: new URGB(0.82645, 0.41986, 0.72315, 0.94);
 }
 ```
  `*` This is not a proper way to create a system color. It is used here in this form only to display the result.
 
  ### Notes
  * Powered by .NET Standart 2.0
-
  * Adobe Photoshop uses slightly different algoritm and rounding to perform color blending, which means that you won't get an identical result.
-
  * Might be bugs. Please submit an issue if you find one.
 
 ## Thanks
