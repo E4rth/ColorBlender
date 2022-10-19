@@ -15,7 +15,7 @@ This is a Color Blending library that implements all the blending modes introduc
 - [Blending](#blending)
    + [Usage](#usage)
    + [Notes](#notes)
-- [Downloads](#downloads)
+- [Download](#download)
 - [Thanks](#thanks)
 - [Creative Society](#creative-society)
 
