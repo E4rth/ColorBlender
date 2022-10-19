@@ -78,10 +78,17 @@ This library provides an implementation for all blend modes listed in the W3C do
        var shortHex   = new HEX("#abc");
        var userHex    = new HEX("bb", "cc", "dd", "aa");
 
-       var resultHexAOpt   = hex.ToString(EHEXOutputFormat.HEXAOpt,   EHashSignFormat.Visible); // Result: "#bbccdd"
-       var resultOptAHex   = hex.ToString(EHEXOutputFormat.OptAHEX,   EHashSignFormat.Hidden);  // Result: "bbccdd"
-       var resultHexAConst = hex.ToString(EHEXOutputFormat.HEXAConst, EHashSignFormat.Visible); // Result: "#bbccddff"
-       var resultConstAHex = hex.ToString(EHEXOutputFormat.ConstAHEX, EHashSignFormat.Hidden);  // Result: "ffbbccdd"
+       var resultHexAOpt = hex.ToString(EHEXOutputFormat.HEXAOpt, EHashSignFormat.Visible);
+       // Result: "#bbccdd"
+
+       var resultOptAHex = hex.ToString(EHEXOutputFormat.OptAHEX, EHashSignFormat.Hidden);
+       // Result: "bbccdd"
+
+       var resultHexAConst = hex.ToString(EHEXOutputFormat.HEXAConst, EHashSignFormat.Visible);
+       // Result: "#bbccddff"
+
+       var resultConstAHex = hex.ToString(EHEXOutputFormat.ConstAHEX, EHashSignFormat.Hidden);
+       // Result: "ffbbccdd"
    }
    ```
 
@@ -99,14 +106,21 @@ This library provides an implementation for all blend modes listed in the W3C do
  {
     var rgb = new RGB(211, 107, 184, 0.94);
 
-    // Conversion
-    var resultRgb   = _colorConverterService.ToRgb(rgb);   // Result: new RGB(211, 107, 184, 0.94);
-    var resultHex   = _colorConverterService.ToHex(rgb);   // Result: new HEX("d3", "6b", "b8", "ef")
-    var resultHsl   = _colorConverterService.ToHsl(rgb);   // Result: new HSL(315, 54, 62, 0.94)
-    var resultColor = _colorConverterService.ToColor(rgb); // Result: new Color(211, 107, 184, 240) *;
+    var resultRgb = _colorConverterService.ToRgb(rgb);
+    // Result: new RGB(211, 107, 184, 0.94);
+
+    var resultHex = _colorConverterService.ToHex(rgb);
+    // Result: new HEX("d3", "6b", "b8", "ef")
+
+    var resultHsl = _colorConverterService.ToHsl(rgb);
+    // Result: new HSL(315, 54, 62, 0.94)
+
+    var resultColor = _colorConverterService.ToColor(rgb);
+    // Result: new Color(211, 107, 184, 240) *;
 
     // Conversion with rounding (Input Color, Rounding, Number of decimal places in the return value)
-    var resultUrgb  = _colorConverterService.ToURgb(rgb, true, 5); // Result: new URGB(0.82645, 0.41961, 0.72157, 0.94);
+    var resultUrgb  = _colorConverterService.ToURgb(rgb, true, 5);
+    // Result: new URGB(0.82645, 0.41961, 0.72157, 0.94);
  }
  ```
 
@@ -127,20 +141,20 @@ static void Main(string[] args)
     var background = new RGB(105, 151, 206, 0.8);
     var foreground = new RGB(247, 92, 177, 0.7);
 
-    RGB   resultRgb   = _colorBlenderService.Normal(background, foreground).ToRgb();   
+    RGB resultRgb = _colorBlenderService.Normal(background, foreground).ToRgb();   
     // Result: new RGB(211, 107, 184, 0.94);
 
-    HEX   resultHex   = _colorBlenderService.Normal(background, foreground).ToHex();
+    HEX resultHex = _colorBlenderService.Normal(background, foreground).ToHex();
     // Result: new HEX("d3", "6b", "b8", "ef");
 
-    HSL   resultHsl   = _colorBlenderService.Normal(background, foreground).ToHsl();
+    HSL resultHsl = _colorBlenderService.Normal(background, foreground).ToHsl();
     // Result: new HSL(315, 54, 62, 0.94);
 
     Color resultColor = _colorBlenderService.Normal(background, foreground).ToColor();
     // Result: new Color(211, 107, 184, 240) *;
 
     // Rounding the output value to 5 decimal places in the return value.
-    URGB  resultURgb  = _colorBlenderService.Normal(background, foreground).ToUrgb(true, 5); 
+    URGB resultURgb = _colorBlenderService.Normal(background, foreground).ToUrgb(true, 5); 
     // Result: new URGB(0.82645, 0.41986, 0.72315, 0.94);
 }
 ```

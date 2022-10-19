@@ -1,6 +1,6 @@
 # Color Blender
 
-[![Version on NuGet](https://img.shields.io/nuget/v/E4rth.ColorBlender)](https://www.nuget.org/packages/E4rth.ColorBlender/)
+[![Version on NuGet](https://img.shields.io/nuget/v/E4rth.ColorBlender?style=flat-square)](https://www.nuget.org/packages/E4rth.ColorBlender/)
 
 >Blends colors with various blend modes in C#
 
@@ -66,10 +66,8 @@ This library provides an implementation for all blend modes listed in the W3C do
 
  #### HEX
 
- The `Red`, `Green`, `Blue` and `Alpha` channels are represented by a hexadecimal form of a `String` between "00" and "ff".
-
- Class constructor supports any form of a Hex color, such as it's short form `#rgb`, and full forms with <b>leading</b> or <b>trailing</b> Alpha channel (`#aarrggbb` and `#rrggbbaa`) with an optional `#` sign.
-
+ The `Red`, `Green`, `Blue` and `Alpha` channels are represented by a hexadecimal form of a `String` between "00" and "ff".<br/>
+ Class constructor supports any form of a Hex color, such as it's short form `#rgb`, and full forms with <b>leading</b> or <b>trailing</b> Alpha channel (`#aarrggbb` and `#rrggbbaa`) with an optional `#` sign.<br/>
  The Hex Object also can be represented as a `String` with all the forms described above.
 
  <details>
@@ -161,7 +159,7 @@ static void Main(string[] args)
  * Might be bugs. Please submit an issue if you find one.
 
 ## Download
-Get the library from [NuGet](https://www.nuget.org/packages/E4rth.ColorBlender/) [![Version on NuGet](https://img.shields.io/nuget/v/E4rth.ColorBlender)](https://www.nuget.org/packages/E4rth.ColorBlender/)
+Get the library from [NuGet](https://www.nuget.org/packages/E4rth.ColorBlender/) [![Version on NuGet](https://img.shields.io/nuget/v/E4rth.ColorBlender?style=flat-square)](https://www.nuget.org/packages/E4rth.ColorBlender/)
 
 ## Thanks
 Many thanks to:
